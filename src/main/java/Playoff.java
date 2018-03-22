@@ -6,9 +6,9 @@ public class Playoff {
     private List<Match> matches;
 
     public Playoff(String... qualificationsResults) {
-        TeamFactory teamFactory = new TeamFactory();
+        TeamParser teamParser = new TeamParser();
         MatchFactory matchFactory = new MatchFactory();
-        teams = teamFactory.createFrom(qualificationsResults);
+        teams = teamParser.createFrom(qualificationsResults);
         matches = matchFactory.createFrom(teams);
     }
 
