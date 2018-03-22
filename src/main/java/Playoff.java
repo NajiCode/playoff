@@ -7,9 +7,9 @@ public class Playoff {
 
     public Playoff(String... qualificationsResults) {
         TeamParser teamParser = new TeamParser();
-        MatchFactory matchFactory = new MatchFactory();
+        MatchConverter matchConverter = new MatchConverter();
         teams = teamParser.createFrom(qualificationsResults);
-        matches = matchFactory.createFrom(teams);
+        matches = matchConverter.convertFrom(teams);
     }
 
     public String[] layout() {

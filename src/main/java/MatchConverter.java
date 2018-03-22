@@ -1,7 +1,7 @@
 import java.util.*;
 
-public class MatchFactory {
-    public List<Match> createFrom(Map<String, Team> teamsMap) {
+public class MatchConverter {
+    public List<Match> convertFrom(Map<String, Team> teamsMap) {
         List<Team> teams = new ArrayList<Team>(teamsMap.values());
         Collections.sort(teams);
         int teamsSize = teams.size();
